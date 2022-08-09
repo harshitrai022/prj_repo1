@@ -1,0 +1,15 @@
+<p>product works!</p>
+<h1>
+    Product Details
+</h1>
+<h2>Product Name : {{Productname|json}}</h2>
+<h2>Price : {{Price |currency:'INR':'symbol'}}</h2>
+<h2>Quantity : {{Quantity}}</h2>
+<h2>Amount:{{amount |currency:'INR'}}</h2>
+<h2>Manufacture Date : {{mfd | date:'fullDate'}}</h2>
+<hr>
+<h1>Products</h1>
+<table border="solid">
+<tr><th>Name</th><th>Price</th><th>MFD</th><th>Quantity</th></tr>
+<tr *ngFor="let p of products"><td>{{p.productname}}</td><td>{{p.price}}</td><td>{{p.mfd|date:'shortDate'}}</td><td>{{p.quantity}}</td></tr>
+</table>
